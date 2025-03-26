@@ -3,3 +3,4 @@
 /build
 local.properties
 /build_plugin/.gradle
+/build_plugin/convention/build
