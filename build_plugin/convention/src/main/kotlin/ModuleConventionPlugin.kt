@@ -26,7 +26,11 @@ class ModuleConventionPlugin : Plugin<Project> {
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
+                add("implementation", project(":c_interfaces"))
                 add("implementation", project(":c_common"))
+                add("implementation", libs.findLibrary("commons.collections4").get())
+                add("implementation", libs.findLibrary("arouter.api").get())
+                add("kapt", libs.findLibrary("arouter.compiler").get())
             }
         }
     }

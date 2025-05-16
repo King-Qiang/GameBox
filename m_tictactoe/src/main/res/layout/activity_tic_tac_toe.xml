@@ -1,0 +1,136 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="me.wangqiang.gamebox.m.tictactoe.viewmodel.TicTacToeViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background1"
+        android:fitsSystemWindows="true">
+
+        <!-- 状态提示 -->
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/c_ui_font_size_20"
+            android:textColor="@color/main_color"
+            android:gravity="center"
+            android:padding="@dimen/c_ui_dimen_12"
+            android:background="@drawable/rounded_status_background"
+            android:layout_marginHorizontal="@dimen/c_ui_dimen_24"
+            android:layout_marginTop="@dimen/c_ui_dimen_16"
+            app:layout_constraintTop_toBottomOf="@id/topToolbar"
+            android:visibility="gone"/>
+
+
+        <!-- 顶部工具栏区域 -->
+        <LinearLayout
+            android:id="@+id/topToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/c_ui_dimen_16"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- 退出按钮 -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_exit"
+                android:layout_width="@dimen/c_ui_dimen_40"
+                android:layout_height="@dimen/c_ui_dimen_40"
+                android:textSize="@dimen/c_ui_font_size_16"
+                app:srcCompat="@drawable/ic_exit"/>
+
+            <!-- 标题文本 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/app_name"
+                android:textStyle="bold"
+                android:textSize="@dimen/c_ui_font_size_24"
+                android:textColor="@color/main_color"
+                android:gravity="center"/>
+
+            <!-- 重置按钮 -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_restart"
+                android:layout_width="@dimen/c_ui_dimen_40"
+                android:layout_height="@dimen/c_ui_dimen_40"
+                android:textSize="@dimen/c_ui_font_size_16"
+                app:srcCompat="@drawable/ic_restart"/>
+        </LinearLayout>
+
+        <!-- 棋盘 -->
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/c_ui_dimen_16"
+            android:rowCount="3"
+            android:columnCount="3"
+            android:alignmentMode="alignMargins"
+            android:padding="@dimen/c_ui_dimen_4"
+            app:layout_constraintTop_toBottomOf="@id/topToolbar"
+            app:layout_constraintBottom_toTopOf="@id/scoreContainer"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <LinearLayout
+            android:id="@+id/scoreContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/c_ui_dimen_60"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="@dimen/c_ui_dimen_16"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- 玩家 X（你）得分 -->
+            <TextView
+                android:id="@+id/scoreX"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/c_ui_dimen_60"
+                android:text="@{@string/score_player(viewModel.scoreLiveData.first)}"
+                android:textSize="@dimen/c_ui_font_size_18"
+                android:gravity="center"
+                android:textColor="@color/fix_color"
+                android:background="@drawable/score_board_x_bg"
+                android:layout_marginEnd="@dimen/c_ui_dimen_8"/>
+
+            <!-- 玩家 O（AI）得分 -->
+            <TextView
+                android:id="@+id/scoreO"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/c_ui_dimen_60"
+                android:text="@{@string/score_computer(viewModel.scoreLiveData.second)}"
+                android:textSize="@dimen/c_ui_font_size_18"
+                android:gravity="center"
+                android:textColor="@color/fix_color"
+                android:background="@drawable/score_board_o_bg"
+                android:layout_marginEnd="@dimen/c_ui_dimen_8"/>
+
+            <!-- 平局次数 -->
+            <TextView
+                android:id="@+id/scoreDraw"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/c_ui_dimen_60"
+                android:text="@{@string/score_draw(viewModel.scoreLiveData.third)}"
+                android:textSize="@dimen/c_ui_font_size_18"
+                android:gravity="center"
+                android:textColor="@color/fix_color"
+                android:background="@drawable/score_board_draw_bg"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

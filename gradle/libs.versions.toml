@@ -1,5 +1,6 @@
 [versions]
 agp = "8.8.1"
+commonsLang3 = "3.12.0"
 kotlin = "1.9.24"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -7,9 +8,11 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
 material = "1.12.0"
+arouterapiversion = "1.5.2"
 
 [libraries]
 android-tools-build-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+commons-lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "commonsLang3" }
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -17,6 +20,9 @@ androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "j
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+commons_collections4 = { group = "org.apache.commons", name = "commons-collections4", version = "4.4" }
+arouter_api = { group = "com.alibaba", name = "arouter-api", version.ref = "arouterapiversion" }
+arouter_compiler = { group = "com.alibaba", name = "arouter-compiler", version.ref = "arouterapiversion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

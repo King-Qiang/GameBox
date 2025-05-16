@@ -22,7 +22,7 @@ class CLibConventionPlugin : Plugin<Project> {
             }
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
-
+                add("implementation", libs.findLibrary("commons.collections4").get())
             }
         }
     }

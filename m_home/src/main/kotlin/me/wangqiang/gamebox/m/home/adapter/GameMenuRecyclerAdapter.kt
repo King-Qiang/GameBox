@@ -2,15 +2,16 @@ package me.wangqiang.gamebox.m.home.adapter
 
 import me.wangqiang.c.common.mvvm.BaseRecyclerAdapter
 import me.wangqiang.gamebox.m.home.BR
+import me.wangqiang.gamebox.m.home.GameMenuData
 import me.wangqiang.gamebox.m.home.R
 import me.wangqiang.gamebox.m.home.databinding.ItemGameMenuBinding
 
-class GameMenuRecyclerAdapter(private var itemList: List<String>): BaseRecyclerAdapter<ItemGameMenuBinding, String>(itemList){
+class GameMenuRecyclerAdapter(private var itemList: List<GameMenuData>): BaseRecyclerAdapter<ItemGameMenuBinding, GameMenuData>(itemList){
     override fun bindViewHolder(
         viewHolder: BindingRecyclerViewHolder<ItemGameMenuBinding>,
-        item: String
+        item: GameMenuData
     ) {
-
+        viewHolder.binding.gameIcon.setImageResource(item.icon)
     }
 
     override fun getBindingItem(): Int {

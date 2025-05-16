@@ -24,3 +24,5 @@ rootProject.name = "GameBox"
 include(":app")
 include(":c_common")
 include(":m_home")
+include(":m_tictactoe")
+include(":c_interfaces")

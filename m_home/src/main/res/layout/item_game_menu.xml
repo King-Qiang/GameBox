@@ -4,11 +4,11 @@
     <data>
         <variable
             name="bindItem"
-            type="String" />
+            type="me.wangqiang.gamebox.m.home.GameMenuData" />
     </data>
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp">
 
@@ -16,17 +16,18 @@
             android:id="@+id/game_icon"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:contentDescription="@null" />
+            android:contentDescription="@null"/>
 
         <TextView
             android:id="@+id/game_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/game_icon"
+            android:layout_below="@id/game_icon"
+            android:layout_marginTop="8dp"
             android:layout_marginStart="16dp"
-            android:text="@{bindItem}"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_centerHorizontal="true"
+            android:text="@{bindItem.title}"
+            android:textSize="14sp"/>
 
     </RelativeLayout>
 </layout>
