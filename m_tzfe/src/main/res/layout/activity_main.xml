@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="me.wangqiang.gamebox.m.tzfe.viewmodel.MainViewModel" />
+            type="me.wangqiang.gamebox.m.tzfe.viewmodel.TZFEMainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

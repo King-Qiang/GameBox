@@ -8,7 +8,7 @@ import me.wangqiang.gamebox.m.tzfe.bean.Tile
 import me.wangqiang.gamebox.m.tzfe.bean.TileMovement
 import kotlin.random.Random
 
-class MainViewModel(application: Application) : BaseViewModel(application) {
+class TZFEMainViewModel(application: Application) : BaseViewModel(application) {
     private val grid: Array<Array<Tile>> = Array(4) { Array(4) { Tile() } }
     var lastMovements: MutableList<TileMovement> = mutableListOf()
     private var score = 0

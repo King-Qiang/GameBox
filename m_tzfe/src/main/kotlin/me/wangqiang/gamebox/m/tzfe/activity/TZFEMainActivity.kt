@@ -1,15 +1,12 @@
 package me.wangqiang.gamebox.m.tzfe.activity
 
-import android.content.Context
 import android.os.Build
-import android.util.Log
 import android.view.GestureDetector
 import android.view.Gravity
 import android.view.MotionEvent
 import android.view.WindowInsets
 import android.widget.GridLayout
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.forEachIndexed
 import com.alibaba.android.arouter.facade.annotation.Route
 import me.wangqiang.c.common.mvvm.MVVMBaseActivity
@@ -22,12 +19,12 @@ import me.wangqiang.gamebox.m.tzfe.bean.Tile
 import me.wangqiang.gamebox.m.tzfe.databinding.ActivityMainBinding
 import me.wangqiang.gamebox.m.tzfe.util.TileAnimator
 import me.wangqiang.gamebox.m.tzfe.viewmodel.GameUiState
-import me.wangqiang.gamebox.m.tzfe.viewmodel.MainViewModel
+import me.wangqiang.gamebox.m.tzfe.viewmodel.TZFEMainViewModel
 import kotlin.math.abs
 
 
 @Route(path = RoutePath_TZFE.Page.TZFE_Main)
-class MainActivity : MVVMBaseActivity<MainViewModel, ActivityMainBinding>() {
+class TZFEMainActivity : MVVMBaseActivity<TZFEMainViewModel, ActivityMainBinding>() {
     private val swipeThreshold = 50 // 扩展函数转换dp为px
     private lateinit var tileAnimator: TileAnimator
     override fun getBindingVariable(): Int {
@@ -38,8 +35,8 @@ class MainActivity : MVVMBaseActivity<MainViewModel, ActivityMainBinding>() {
         return R.layout.activity_main
     }
 
-    override fun getViewModelClass(): Class<MainViewModel> {
-        return MainViewModel::class.java
+    override fun getViewModelClass(): Class<TZFEMainViewModel> {
+        return TZFEMainViewModel::class.java
     }
 
     override fun initView() {
