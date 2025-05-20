@@ -13,6 +13,9 @@
     <dimen name="c_ui_dimen_40">40dp</dimen>
     <dimen name="c_ui_dimen_48">48dp</dimen>
     <dimen name="c_ui_dimen_60">60dp</dimen>
+    <dimen name="c_ui_dimen_64">64dp</dimen>
+    <dimen name="c_ui_dimen_96">96dp</dimen>
+    <dimen name="c_ui_dimen_104">104dp</dimen>
     
     <dimen name="c_ui_font_size_16">16sp</dimen>
     <dimen name="c_ui_font_size_18">18sp</dimen>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_color">#FF7043</color>
+
+    <color name="color_number_default">#CCC0B3</color>
+    <color name="color_number_2">#EEE4DA</color>
+    <color name="color_number_4">#EDE0C8</color>
+    <color name="color_number_8">#F2B179</color>
+    <color name="color_number_16">#F59563</color>
+    <color name="color_number_32">#F67C5F</color>
+    <color name="color_number_64">#F65E3B</color>
+    <color name="color_number_128">#EDCF72</color>
+    <color name="color_number_256">#EDCC61</color>
+    <color name="color_number_512">#EDC850</color>
+    <color name="color_number_1024">#EDC53F</color>
+    <color name="color_number_2048">#EDC22E</color>
+    <color name="background1">#F5F5F5</color>
+    <color name="bg_primary">#FAF8EF</color>
+    <color name="bg_dark">#FAF8EF</color>
+</resources>

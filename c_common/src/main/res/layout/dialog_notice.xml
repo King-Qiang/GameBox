@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/c_ui_dimen_32"
+    android:background="@drawable/dialog_bg"> <!-- 透明背景 -->
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="游戏结束"
+        android:textSize="@dimen/c_ui_font_size_22"
+        android:textColor="@color/text_color1"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"/>
+
+    <!-- 内容 -->
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="是否重新开始游戏？"
+        android:textSize="@dimen/c_ui_font_size_16"
+        android:textColor="@color/text_color2"
+        android:layout_marginTop="@dimen/c_ui_dimen_16"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"/>
+
+    <!-- 按钮容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/c_ui_dimen_24"
+        app:layout_constraintTop_toBottomOf="@id/tv_content">
+
+        <!-- 取消按钮 -->
+        <Button
+            android:id="@+id/btn_left"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/c_ui_dimen_48"
+            android:textColor="@color/fix_color"
+            android:textSize="@dimen/c_ui_font_size_16"
+            android:backgroundTint="@color/background2"
+            android:layout_marginEnd="@dimen/c_ui_dimen_8"/>
+
+        <!-- 确认按钮 -->
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/c_ui_dimen_48"
+            android:textColor="@color/fix_color"
+            android:textSize="@dimen/c_ui_font_size_16"
+            android:backgroundTint="@color/main_color"
+            android:layout_marginStart="@dimen/c_ui_dimen_8"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
