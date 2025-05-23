@@ -91,10 +91,10 @@ class TZFEMainActivity : MVVMBaseActivity<TZFEMainViewModel, ActivityMainBinding
 
                 }
                 is GameUiState.Win -> {
-                    showNoticeDialog("You get ${it.score} score", "Do you want to play again?")
+                    showNoticeDialog(getString(R.string.tzfe_finish_game, it.score.toString()), getString(R.string.play_again))
                 }
                 is GameUiState.GameOver -> {
-
+                    showNoticeDialog(getString(R.string.tzfe_final_score_content, it.score.toString()), getString(R.string.play_again))
                 }
             }
         }
@@ -102,7 +102,7 @@ class TZFEMainActivity : MVVMBaseActivity<TZFEMainViewModel, ActivityMainBinding
             finish()
         }
         mBinding.btnRestart.setOnClickListener {
-            showNoticeDialog("Notice", "Do you want to start over?")
+            showNoticeDialog(getString(R.string.notice), getString(R.string.play_start_over))
         }
     }
 
@@ -170,11 +170,10 @@ class TZFEMainActivity : MVVMBaseActivity<TZFEMainViewModel, ActivityMainBinding
         NoticeDialog.Builder(this, null)
             .setTitle(title)
             .setContent(content)
-            .setBtnUpText("Yes"){
+            .setBtnUpText(getString(R.string.yes)){
                 mViewModel.reset()
             }
-            .setBtnDownText("Exit"){
-                finish()
+            .setBtnDownText(getString(R.string.cancel)){
             }
             .build()
             .show()
@@ -197,7 +196,7 @@ class TZFEMainActivity : MVVMBaseActivity<TZFEMainViewModel, ActivityMainBinding
         }
     }
 
-    fun getStatusBarHeight(): Int {
+    private fun getStatusBarHeight(): Int {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             val windowInsets = windowManager?.currentWindowMetrics?.windowInsets
                 ?: return 0

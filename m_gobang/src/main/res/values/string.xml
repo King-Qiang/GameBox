@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gobang_app_name">Go Bang</string>
+    <string name="notice">Notice</string>
+    <string name="yes">OK</string>
+    <string name="start_over">restart</string>
+    <string name="cancel">Cancel</string>
+    <string name="win_notice">You won this round</string>
+    <string name="lose_notice">You lost this round</string>
+    <string name="draw_notice">This round is tied</string>
+    <string name="play_again">Do you want to play again?</string>
+    <string name="play_start_over">Do you want to start over?</string>
+    <string name="ai_piece">AI: %1$s</string>
+    <string name="player_piece">You:  %1$s</string>
+    <string name="score_draw">Draw: %1$s</string>
+    <string name="black_turn">Black Round</string>
+    <string name="white_turn">White Round</string>
+    <string name="ai_thinking">AI is thinking…</string>
+    <string name="game_over">The game has ended</string>
+</resources>

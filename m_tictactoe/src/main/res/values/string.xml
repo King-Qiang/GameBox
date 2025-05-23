@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Tic Tac Toe</string>
+    <string name="tictactoe_app_name">Tic Tac Toe</string>
     <string name="win_notice">You won this round</string>
     <string name="lose_notice">You lost this round</string>
     <string name="draw_notice">This round is tied</string>

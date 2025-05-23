@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">2048</string>
+    <string name="tzfe_app_name">2048</string>
+    <string name="tzfe_final_score_content">The final score is %1$s points</string>
+    <string name="tzfe_finish_game">Congratulations on completing 2048 and scoring %1$s points</string>
+    <string name="notice">Notice</string>
+    <string name="yes">OK</string>
+    <string name="start_over">restart</string>
+    <string name="cancel">Cancel</string>
+    <string name="play_again">Do you want to play again?</string>
+    <string name="play_start_over">Do you want to start over?</string>
 </resources>

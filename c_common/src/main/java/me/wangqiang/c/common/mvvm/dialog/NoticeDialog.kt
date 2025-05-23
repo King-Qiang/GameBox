@@ -41,6 +41,12 @@ class NoticeDialog (
         tvContent?.text = content
         btnLeft?.text = btnUpText
         btnRight?.text = btnDownText
+        if (btnDownText.isEmpty()) {
+            btnRight?.visibility = View.GONE
+        }
+        if (btnUpText.isEmpty()) {
+            btnLeft?.visibility = View.GONE
+        }
 
         mDialog = Dialog(context, R.style.CommonDialog).apply {
             setContentView(mParent)
