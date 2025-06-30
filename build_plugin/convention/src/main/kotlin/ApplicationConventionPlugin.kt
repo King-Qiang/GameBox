@@ -35,7 +35,12 @@ class ApplicationConventionPlugin : Plugin<Project> {
             configureARouter(extensions, target)
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
-
+                add("implementation", platform(libs.findLibrary("compose.bom").get()))
+                add("implementation", libs.findLibrary("compose.ui").get())
+                add("implementation", libs.findLibrary("compose.ui.graphics").get())
+                add("implementation", libs.findLibrary("compose.ui.tooling.preview").get())
+                add("implementation", libs.findLibrary("compose.material3").get())
+                add("implementation", libs.findLibrary("compose.activity").get())
             }
         }
     }

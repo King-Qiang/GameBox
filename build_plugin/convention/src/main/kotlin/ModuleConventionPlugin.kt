@@ -31,6 +31,14 @@ class ModuleConventionPlugin : Plugin<Project> {
                 add("implementation", libs.findLibrary("commons.collections4").get())
                 add("implementation", libs.findLibrary("arouter.api").get())
                 add("kapt", libs.findLibrary("arouter.compiler").get())
+                add("implementation", platform(libs.findLibrary("compose.bom").get()))
+                add("implementation", libs.findLibrary("compose.ui").get())
+                add("implementation", libs.findLibrary("compose.ui.graphics").get())
+                add("implementation", libs.findLibrary("compose.ui.tooling.preview").get())
+                add("implementation", libs.findLibrary("compose.material3").get())
+                add("implementation", libs.findLibrary("compose.activity").get())
+                add("debugImplementation", libs.findLibrary("compose.ui.tooling").get())
+                add("debugImplementation", libs.findLibrary("compose.ui.test.manifest").get())
             }
         }
     }

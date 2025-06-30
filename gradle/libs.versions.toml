@@ -1,7 +1,7 @@
 [versions]
 agp = "8.8.1"
 commonsLang3 = "3.12.0"
-kotlin = "1.9.24"
+kotlin = "1.9.25"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -23,6 +23,14 @@ material = { group = "com.google.android.material", name = "material", version.r
 commons_collections4 = { group = "org.apache.commons", name = "commons-collections4", version = "4.4" }
 arouter_api = { group = "com.alibaba", name = "arouter-api", version.ref = "arouterapiversion" }
 arouter_compiler = { group = "com.alibaba", name = "arouter-compiler", version.ref = "arouterapiversion" }
+compose_bom = { group = "androidx.compose", name = "compose-bom", version = "2024.02.02" }
+compose_ui = { group = "androidx.compose.ui", name = "ui"}
+compose_ui_graphics = { group = "androidx.compose.ui", name = "ui-graphics"}
+compose_ui_tooling_preview = { group = "androidx.compose.ui", name = "ui-tooling-preview"}
+compose_material3 = { group = "androidx.compose.material3", name = "material3"}
+compose_activity = { group = "androidx.activity", name = "activity-compose", version = "1.8.2"}
+compose_ui_tooling = { group = "androidx.compose.ui", name = "ui-tooling"}
+compose_ui_test_manifest = { group = "androidx.compose.ui", name = "ui-test-manifest"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -33,14 +33,15 @@ class TZFEMainViewModel(application: Application) : BaseViewModel(application) {
                 grid[i][j] = Tile()
             }
         }
-        // 生成两个初始方块
-        addNewNumber()
-        addNewNumber()
+        gameUiState.postValue(GameUiState.Playing)
         currentScore.postValue(0)
         if (score >  highestScore.value!!) {
             highestScore.postValue(score)
         }
         score = 0
+        // 生成两个初始方块
+        addNewNumber()
+        addNewNumber()
         gameGrid.postValue(grid)
     }
 
@@ -63,7 +64,7 @@ class TZFEMainViewModel(application: Application) : BaseViewModel(application) {
                 highestScore.postValue(score)
             }
         } else if (grid.any { row -> row.any { it.value == 2048 } }) {
-            gameUiState.value = GameUiState.Win(10000)
+            gameUiState.value = GameUiState.Win(score)
         }
     }
 

@@ -22,9 +22,13 @@ internal fun configureAndroid(commonExtension: CommonExtension<*, *, *, *, *, *>
 
         buildFeatures {
             buildConfig = true
+            compose = true
             dataBinding {
                 enable = true
             }
+        }
+        composeOptions {
+            kotlinCompilerExtensionVersion = "1.5.15" // 与 Kotlin 版本对应
         }
     }
 }

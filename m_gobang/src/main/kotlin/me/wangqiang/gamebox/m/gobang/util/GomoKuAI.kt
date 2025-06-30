@@ -165,7 +165,7 @@ class GomokuAI(private val maxDepth: Int = 2) {
                 }
             }
         }
-        return candidates.toList()
+        return candidates.shuffled()
     }
 
     private fun evaluate(board: Array<Array<Piece>>, isMyTurn: Boolean, lastMove: Cell?): Int {

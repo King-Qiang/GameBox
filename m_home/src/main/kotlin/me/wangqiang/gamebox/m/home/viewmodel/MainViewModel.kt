@@ -2,6 +2,7 @@ package me.wangqiang.gamebox.m.home.viewmodel
 
 import android.app.Application
 import me.wangqiang.c.common.mvvm.BaseViewModel
+import me.wangqiang.gamebox.c.interfaces.path.RoutePath_FlappyBird
 import me.wangqiang.gamebox.c.interfaces.path.RoutePath_GoBang
 import me.wangqiang.gamebox.c.interfaces.path.RoutePath_TZFE
 import me.wangqiang.gamebox.c.interfaces.path.RoutePath_TicTacToe
@@ -15,7 +16,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
             GameMenuData("井字棋", R.drawable.ic_tic_tac_toe, RoutePath_TicTacToe.Page.TicTacToe_Main),
             GameMenuData("2048", R.drawable.ic_tzfe, RoutePath_TZFE.Page.TZFE_Main),
             GameMenuData("五子棋", R.drawable.ic_gobang, RoutePath_GoBang.Page.GoBang_Main),
-//            GameMenuData("象棋", R.drawable.ic_chinese_chess, RoutePath_TicTacToe.Page.TicTacToe_Main)
+            GameMenuData("像素鸟", R.drawable.ic_flappy_bird, RoutePath_FlappyBird.Page.FlappyBird_Main)
         )
     }
 }
