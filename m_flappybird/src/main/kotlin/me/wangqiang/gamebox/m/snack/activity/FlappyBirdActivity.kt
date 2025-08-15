@@ -1,4 +1,4 @@
-package me.wangqiang.gamebox.m.flappybird.activity
+package me.wangqiang.gamebox.m.snack.activity
 
 import androidx.activity.ComponentActivity
 import com.alibaba.android.arouter.facade.annotation.Route
@@ -200,7 +200,7 @@ fun FlappyBirdGame() {
             .fillMaxSize()
             .background(Color(0xFF70C5CE))
             .pointerInput(Unit) {
-                awaitPointerEventScope {
+                this.awaitPointerEventScope {
                     while (true) {
                         awaitPointerEvent().changes.first().also { pointerInput ->
                             if (pointerInput.pressed) {

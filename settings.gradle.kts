@@ -17,6 +17,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
@@ -29,3 +30,4 @@ include(":c_interfaces")
 include(":m_tzfe")
 include(":m_gobang")
 include(":m_flappybird")
+include(":m_snake")

@@ -40,4 +40,5 @@ dependencies {
     implementation(project(":m_tzfe"))
     implementation(project(":m_gobang"))
     implementation(project(":m_flappybird"))
+    implementation(project(":m_snake"))
 }

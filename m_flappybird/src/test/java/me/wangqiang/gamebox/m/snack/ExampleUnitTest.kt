@@ -1,4 +1,4 @@
-package me.wangqiang.gamebox.m.flappybird
+package me.wangqiang.gamebox.m.snack
 
 import org.junit.Test
 
